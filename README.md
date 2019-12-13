@@ -25,7 +25,7 @@
 
 The directory "templates" contains html files which define the layout for each page in our application.
 
-The directory "statics" contains information that is stored in the database and load every time, such us the custon css that we apply to the layouts, the images, etc.
+The directory "statics" contains information that is stored in the database and loaded every time, such us the Custon.css that we apply to the layouts, the images, etc.
 
 The directory "application" contains all the core dynamic components such us the fields of each form and the schema of our database.
 
@@ -36,22 +36,23 @@ Finally, the main file is were we define the routes and initialize our database.
 **Application description:**
 
   As soon as the user enters the homepage of the application we check if this user is already logged in 
-  or not. (For example, if he has been logged in a different tab on the browser).
-  If the user has not been logged in jet, the login page is loaded. On this page the user has two options:
+  or not. (For example, if he/she has logged in from a different tab on the same browser).
+  If the user is not logged in, the login page is loaded. 
+  On this page the user has two options:
 
    1. Fill the form entering his name and password:
      
-  The user has to fill his username and password, these fields are both validated in the database 
+  The user has to fill his username and password, these fields are both queried in the database 
   and if the user has entered something wrong (either on username or password), an error message 
   will appear which indicates the wrong username or password.
   After the successful login the user is redirected to a custom homepage where he/she can see a 
-  custom welcoming message. On this page the user has an additional ability to logout from the system.
+  custom welcoming message. On this page the user has the ability to logout from the system.
 
    2. Follow the registration link:
       
   This link redirects to the registration form. On this form the user has to fill the username,
   email and password twice. All the fields are required and if the user does not fill any of them, 
-  an error message will appeared. In addition, for the **username** , **e-mail** and **password** 
+  an error message will appear. In addition, for the **username** , **e-mail** and **password** 
   more validations have been implemented.
   
   More specifically, for the e-mail we check if the format is correct and follows the requirements 
@@ -59,7 +60,7 @@ Finally, the main file is were we define the routes and initialize our database.
   already exist in our database (in case of existence the user is prompted to use a different one).
   
   On the other hand, for the password, we first check if the password's length is less than 8 characters, 
-  in this case again an error message is appeared which indicated that a longer password should be filled.
+  in this case again an error message appears which indicates that a longer password should be filled.
   Secondly, we check if the fields "password" and "repeat password" are equal, if not a descriptive 
   error message is appeared.
   
