@@ -1,19 +1,12 @@
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/custom.css') }}">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>HomePage</title>
-    <IMG SRC="{{ url_for('static', filename='images/logo.png') }}" ALT="logo" WIDTH=400 HEIGHT=100 align="center">
-</head>
 
-<body>
-<div class="welcome"> <h1>Welcome {{ current_user.username }}!</h1><h4s>Your e-mail address is: {{ current_user.email }}!</h4s>
-        <p>Do you want to logout? <a href="{{ url_for('logout') }}">Click here!</a></p>
-</div>
+ .Navigation{
+  text-align: center;
+}
+.Navigation ul{
+  display: inline-block;
+}
 
-<style>
-    html, body {
+html, body {
     height: 100%!important;
     background-color: #E0E0E0!important;
 }
@@ -67,10 +60,3 @@ input{
     display: block;
 }
 
-
-</style>
-
-
-
-</body>
-</html>

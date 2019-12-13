@@ -1,0 +1,101 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/custom.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regisrtation</title>
+    <IMG SRC="{{ url_for('static', filename='images/logo.png') }}" ALT="logo" WIDTH=400 HEIGHT=100 align="center">
+    <h1 style="color:#B32728">Registration</h1>
+</head>
+
+<body>
+     <form class="form-signup" method="POST" action="/register">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}<br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password2.label }}<br>
+            {{ form.password2(size=32) }}<br>
+            {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+       <button class="custom_button" type="submit">Register</button>
+    </form>
+<style>
+    html, body {
+    height: 100%!important;
+    background-color: #E0E0E0!important;
+}
+
+html {
+    display: table!important;
+    margin: auto!important;
+}
+
+body, img{
+    display: table-cell!important;
+    vertical-align: middle!important;
+}
+
+.password_input, .username_input{
+    width: 100%!important;
+}
+
+.custom_button{
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  width:60%;
+  padding: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color:#B32728;
+  margin: auto;
+  display: block;
+}
+
+.custom_button:hover {
+  background-color: #B32728;;
+  color: white;
+}
+
+input{
+ border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color:#B32728;
+
+}
+
+.welcome{
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+</style>
+</body>
+</html>
